@@ -1,0 +1,6 @@
+MacOs HighSierra バージョン10.13.3
+MacBook Pro (13-inch, Early 2011)
+
+プロセッサ　　　2.7 GHz Intel Core i7
+メモリ　　　　　8 GB 1333 MHz DDR3
+グラフィックス　Intel HD Graphics 3000 512 MB
