@@ -18,11 +18,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class java11a extends HttpServlet {
     void myprofile(PrintWriter pw){
-    for(int i =i=1;i<=10;i++){    
     pw.print("滝澤遼太郎です<br>");
     pw.print("平成6年6月24日生まれです<br>");
     pw.print("趣味はゲームです<br>");
-    }
+    
     }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -48,7 +47,9 @@ public class java11a extends HttpServlet {
             out.println("<h1>Servlet java11a at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
+            for(int i =i=1;i<=10;i++){
             myprofile(out);
+            }
         } 
     }
     
