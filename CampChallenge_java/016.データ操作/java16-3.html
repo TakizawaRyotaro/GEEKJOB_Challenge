@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>入力フィールド</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action = "./java16-2.jsp" method = "post" >   
+            <p>氏名<input type = "text"  name = "name"></p>
+            <!--性別を選択して送信-->
+            <p>性別<select name = "sex">   
+                    <option label = "男" value = "男"></option>   
+                    <option label = "女" value = "女"></option>
+                </select>
+            <p>趣味<br>
+                <textarea name = "hobby"></textarea> </p>
+            <!--送信ボタンの作成-->　　　　　　　　
+            <p><input type = "submit" name = "btnSubmit"></p>    
+
+        </form>
+    </body>
+</html>
