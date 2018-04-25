@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>レシート作成</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="./java16-4.jsp" method="get" >   
+<!--価格と数量を設定するためにnumber型を利用-->            
+            <p>価格<input type="number" name="total" min="1"></p>
+            <p>数量<input type="number" name="count" min="1"></p>
+<!--品目を選ぶラジオボタン-->
+            <p>雑貨<input type="radio" name="goods" value="雑貨">
+                生鮮食品<input type="radio" name="goods" value="生鮮食品">
+                その他<input type="radio" name="goods" value="その他"></p>
+<!--送信ボタンを作る-->
+            <p><input type = "submit"></p>
+        </form> 
+    </body>
+</html>
