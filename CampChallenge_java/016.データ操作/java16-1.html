@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!-- 以下の情報を入力するフォームを作る
+名前情報（テキストボックスで作成） 
+性別情報（ラジオボタンで作成） 
+趣味情報（テキストエリアで作成 -->
+
+
+<html>
+    <head>
+        <title>入力フィールド</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--指定された情報を入力する-->        
+        <form action = "./java16-2.jsp" method = "post" >   
+            <p>氏名<input type = "text"  name = "name"></p>
+            <p>性別
+                男<input type = "radio" name = "sex" value = "男" >
+                女<input type = "radio" name = "sex" value = "女" ><br></p>
+            <p>趣味<br>
+                <textarea name = "hobby"></textarea> </p>
+            <!--送信ボタンの作成-->　　　　　　　　
+            <p><input type = "submit" name = "btnSubmit"></p>    
+
+        </form>
+    </body>
+</html>
