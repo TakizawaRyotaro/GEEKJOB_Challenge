@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>レコード追加画面</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <form action="./java18-9.jsp" method="post">  
+            名前<input type="text" name="name" ><br><br>
+            電話番号<input type="number" name="tel1" max="999" min="0">
+            - <input type="number" name="tel2" max="9999" min="0">
+            - <input type="number" name="tel3" max="9999" min="0"><br><br>
+            生年月日:
+            西暦<input type="number" name="birthday1" min="1900" max="9999">年 <input type="number" name="birthday2" min="1" max="12">月　<input type="number" name="birthday3" min="1" max="31">日<br><br>
+            年齢<input type="number" name="age" min="0" max="120"><br><br>
+            <input type="submit">
+        </form>    
+    </body>
+</html>
