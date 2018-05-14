@@ -4,19 +4,20 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/Servlet/Main.java</file>
-            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/Servlet/NewServlet.java</file>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/WEB-INF/ZaikoKanriHomePage.jsp</file>
+            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/Servlet/GoHomePage.java</file>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/index.jsp</file>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/Servlet/Logout.java</file>
-            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/WEB-INF/web.xml</file>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/WEB-INF/logout.jsp</file>
-            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/index.html</file>
+            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/Servlet/InsertForm.java</file>
+            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/WEB-INF/insertResult.jsp</file>
+            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/zaiko/LoginLogic.java</file>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/Servlet/Main2.java</file>
-            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/main.jsp</file>
-            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/insertResult.jsp</file>
-            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/insertForm.jsp</file>
+            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/zaiko/Product.java</file>
+            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/zaiko/User.java</file>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/src/java/Servlet/Login.java</file>
             <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/WEB-INF/loginResult.jsp</file>
+            <file>file:/Users/takizawaryoutarou/NetBeansProjects/ZaikoKanri/web/WEB-INF/insertForm.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -13,11 +13,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
 
 /**
  *
@@ -50,7 +48,7 @@ public class Main2 extends HttpServlet {
             db_st = db_con.prepareStatement("INSERT INTO product(productID,name,type,price,stock) VALUES(?,?,?,?,?)");
 
             request.setCharacterEncoding("UTF-8");
-            
+
             String idReceived = request.getParameter("productID");
             String nameReceived = request.getParameter("productName");
             String typeReceived = request.getParameter("productType");

@@ -25,54 +25,52 @@ import zaiko.User;
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 
-protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) { 
+        try (PrintWriter out = response.getWriter()) {
 
-    
 //リクエストパラメータの取得      
-        request.setCharacterEncoding("UTF-8");
-        String name = request.getParameter("name");
-        String pass = request.getParameter("pass");
+            request.setCharacterEncoding("UTF-8");
+            String name = request.getParameter("name");
+            String pass = request.getParameter("pass");
 
 //Userインスタンス(ユーザー情報)の生成
-        User user = new User(name, pass);
+            User user = new User(name, pass);
 
 //ログイン処理      
-        LoginLogic loginLogic = new LoginLogic();
-        boolean isLogin = loginLogic.execute(user);
+            LoginLogic loginLogic = new LoginLogic();
+            boolean isLogin = loginLogic.execute(user);
 
 //ログイン成功時の処理  
-        if (isLogin) {
+            if (isLogin) {
 //ユーザー情報をセッションスコープに保存  
-            HttpSession session = request.getSession();
-            session.setAttribute("loginUser", user);
-        }
+                HttpSession session = request.getSession();
+                session.setAttribute("loginUser", user);
+            }
 //ログイン結果画面にフォワード
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/loginResult.jsp");
-        dispatcher.forward(request, response);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/loginResult.jsp");
+            dispatcher.forward(request, response);
+
+        }
 
     }
 
-}
-
-@Override
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-@Override
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
-    
-@Override
+
+    @Override
     public String getServletInfo() {
         return "Short description";
     }
 }
-

@@ -11,7 +11,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import java.sql.*;
 
@@ -31,8 +30,8 @@ public class Main extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        PrintWriter out = response.getWriter(); 
-               try {
+        PrintWriter out = response.getWriter();
+        try {
 
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             db_con = DriverManager.getConnection("jdbc:mysql://localhost:3306/zaiko", "GEEKJOB", "password");
@@ -49,11 +48,11 @@ public class Main extends HttpServlet {
                 int productStock = db_data.getInt("stock");
                 out.println("商品ID:" + productID + "商品名:" + productName + "商品の種類:" + productType + "価格:" + productPrice + "在庫:" + productStock + "<br>");
             }
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");            
+            out.println("<title>Servlet NewServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<a href=\"./GoHomePage\">ホームページへ戻る。</a>");
@@ -63,7 +62,6 @@ public class Main extends HttpServlet {
             db_data.close();
             db_st.close();
             db_con.close();
-            
 
         } catch (SQLException e) {
             out.print(e.getMessage());
@@ -81,9 +79,9 @@ public class Main extends HttpServlet {
 
             }
         }
-    }           
-               
-                @Override
+    }
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
@@ -100,10 +98,3 @@ public class Main extends HttpServlet {
         return "short description";
     }
 }
-
-               
-               
-               
-               
-    
-
