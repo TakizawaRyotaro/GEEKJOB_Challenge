@@ -23,8 +23,20 @@ public class Search extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        HttpSession session = request.getSession();
+        
+        //UserDataBeansがない場合はここで新規作成し、セッションに乗せる
+        String ret = request.getParameter("return");
+        
+        if(session.getAttribute("searchData") == null || ret == null){
+            UserDataBeans sd = new UserDataBeans();
+        session.setAttribute("searchData", sd);
+        }
+        session.setAttribute("adc", (int) (Math.random() * 1000));
         request.getRequestDispatcher("/search.jsp").forward(request, response);  
     }
 

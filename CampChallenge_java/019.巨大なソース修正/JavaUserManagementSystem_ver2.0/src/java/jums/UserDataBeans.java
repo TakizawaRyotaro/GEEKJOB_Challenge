@@ -15,7 +15,7 @@ public class UserDataBeans implements Serializable{
     private int month;
     private int day;
     private String tell;
-    private int type ;
+    private int type;
     private String comment;
     
     public UserDataBeans(){

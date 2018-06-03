@@ -1,9 +1,14 @@
+
 <%@page import="javax.servlet.http.HttpSession"
         import="jums.JumsHelper"
         import="jums.UserDataBeans" %>
 <%
-    JumsHelper jh = JumsHelper.getInstance();
-    UserDataBeans udb = (UserDataBeans)request.getAttribute("udb");
+    JumsHelper jh = new JumsHelper();
+    jh = JumsHelper.getInstance();
+//    UserDataBeans udb = (UserDataBeans)request.getAttribute("udb");
+    HttpSession hs = request.getSession();
+    UserDataBeans udb = (UserDataBeans) hs.getAttribute("udb");
+
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +20,7 @@
     <body>
         <h1>登録結果</h1><br>
         名前:<%= udb.getName()%><br>
-        生年月日:<%= udb.getYear()+"年"+udb.getMonth()+"月"+udb.getDay()+"日"%><br>
+        生年月日:<%= udb.getYear() + "年" + udb.getMonth() + "月" + udb.getDay() + "日"%><br>
         種別:<%= jh.exTypenum(udb.getType())%><br>
         電話番号:<%= udb.getTell()%><br>
         自己紹介:<%= udb.getComment()%><br>
@@ -23,3 +28,5 @@
     </body>
     <%=jh.home()%>
 </html>
+<%--セッションの値の削除を行う場所を変更--%>
+<% session.invalidate();%>

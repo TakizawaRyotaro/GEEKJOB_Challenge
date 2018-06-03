@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * insertconfirm.jspと対応するサーブレット
- * フォーム入力された情報はここでセッションに格納し、以降持ちまわることになる
+ * insertconfirm.jspと対応するサーブレット フォーム入力された情報はここでセッションに格納し、以降持ちまわることになる
  * 直接アクセスした場合はerror.jspに振り分け
+ *
  * @author hayashi-s
  */
 public class InsertConfirm extends HttpServlet {
@@ -26,21 +26,20 @@ public class InsertConfirm extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        //セッションスタート
-        HttpSession session = request.getSession();
-        
-        try{
+        try {
+            //セッションスタート
+            HttpSession session = request.getSession();
+            UserDataBeans udb = (UserDataBeans) session.getAttribute("udb");
             request.setCharacterEncoding("UTF-8");//リクエストパラメータの文字コードをUTF-8に変更
-            
+
             //アクセスルートチェック
             String accesschk = request.getParameter("ac");
-            if(accesschk ==null || (Integer)session.getAttribute("ac")!=Integer.parseInt(accesschk)){
+            if (accesschk == null || (Integer) session.getAttribute("ac") != Integer.parseInt(accesschk)) {
                 throw new Exception("不正なアクセスです");
             }
-            
+
             //フォームからの入力を取得して、JavaBeansに格納
-            UserDataBeans udb = new UserDataBeans();
+//            UserDataBeans udb = new UserDataBeans();
             udb.setName(request.getParameter("name"));
             udb.setYear(request.getParameter("year"));
             udb.setMonth(request.getParameter("month"));
@@ -50,15 +49,15 @@ public class InsertConfirm extends HttpServlet {
             udb.setComment(request.getParameter("comment"));
 
             //ユーザー情報群をセッションに格納
-            session.setAttribute("udb", udb);
+//            session.setAttribute("udb", udb);
             System.out.println("Session updated!!");
-            
+
             request.getRequestDispatcher("/insertconfirm.jsp").forward(request, response);
-        }catch(Exception e){
+        } catch (Exception e) {
             request.setAttribute("error", e.getMessage());
             request.getRequestDispatcher("/error.jsp").forward(request, response);
         }
-            
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

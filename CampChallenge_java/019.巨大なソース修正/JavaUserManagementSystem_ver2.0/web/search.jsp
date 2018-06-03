@@ -2,6 +2,7 @@
         import="jums.JumsHelper" %>
 <%
     JumsHelper jh = JumsHelper.getInstance();
+    HttpSession hs = request.getSession();
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -33,6 +34,7 @@
             <% } %>
         <br>
 
+        <input type="hidden" name="ac"  value="<%= hs.getAttribute("ac")%>">
         <input type="submit" name="btnSubmit" value="検索">
     </form>
         <br>

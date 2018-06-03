@@ -24,7 +24,14 @@ public class Insert extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         HttpSession session = request.getSession();
+
+        if(session.getAttribute("udb") == null){
+            UserDataBeans udb = new UserDataBeans();
+        session.setAttribute("udb", udb);
+        }    
+        
         session.setAttribute("ac", (int) (Math.random() * 1000));
         request.getRequestDispatcher("/insert.jsp").forward(request, response);   
     }
