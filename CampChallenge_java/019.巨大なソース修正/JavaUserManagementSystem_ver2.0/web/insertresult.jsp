@@ -1,14 +1,9 @@
-
 <%@page import="javax.servlet.http.HttpSession"
         import="jums.JumsHelper"
         import="jums.UserDataBeans" %>
 <%
-    JumsHelper jh = new JumsHelper();
-    jh = JumsHelper.getInstance();
-//    UserDataBeans udb = (UserDataBeans)request.getAttribute("udb");
-    HttpSession hs = request.getSession();
-    UserDataBeans udb = (UserDataBeans) hs.getAttribute("udb");
-
+    JumsHelper jh = JumsHelper.getInstance();
+    UserDataBeans udb = (UserDataBeans) request.getAttribute("udb");
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,7 +21,5 @@
         自己紹介:<%= udb.getComment()%><br>
         以上の内容で登録しました。<br>
     </body>
-    <%=jh.home()%>
+    <%=JumsHelper.getInstance().home()%>
 </html>
-<%--セッションの値の削除を行う場所を変更--%>
-<% session.invalidate();%>

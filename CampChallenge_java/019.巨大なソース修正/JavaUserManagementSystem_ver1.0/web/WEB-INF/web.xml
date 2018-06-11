@@ -12,6 +12,14 @@
         <servlet-name>insertresult</servlet-name>
         <servlet-class>jums.InsertResult</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserDataBeans</servlet-name>
+        <servlet-class>jums.UserDataBeans</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sessiondelete</servlet-name>
+        <servlet-class>session.sessiondelete</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>insert</servlet-name>
         <url-pattern>/insert</url-pattern>
@@ -24,10 +32,17 @@
         <servlet-name>insertresult</servlet-name>
         <url-pattern>/insertresult</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserDataBeans</servlet-name>
+        <url-pattern>/UserDataBeans</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sessiondelete</servlet-name>
+        <url-pattern>/sessiondelete</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
 </web-app>
